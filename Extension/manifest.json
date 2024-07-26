@@ -1,0 +1,51 @@
+{
+	"manifest_version": 2,
+	"default_locale": "en",
+	"name": "Sessy",
+	"description": "__MSG_extension_description__",
+	"version": "1.0.2",
+	"background": {
+		"scripts": [
+			"dist/background.js"
+		],
+		"persistent": true,
+		"type": "module"
+	},
+	"icons": {
+		"48": "images/v0_48px.png",
+		"96": "images/v0_96px.png",
+		"128": "images/v0_128px.png",
+		"256": "images/v0_256px.png",
+		"512": "images/v0_512px.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "images/v0_16px.png",
+			"19": "images/v0_19px.png",
+			"32": "images/v0_32px.png",
+			"38": "images/v0_38px.png",
+			"48": "images/v0_48px.png",
+			"72": "images/v0_72px.png"
+		}
+	},
+	"options_ui": {
+		"page": "public/settings.html",
+		"open_in_tab": true
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{fa645c65-365a-498c-99d7-486572a74320}"
+		}
+	},
+	"optional_permissions": [],
+	"permissions": [
+		"storage",
+		"*://url-exchange.adams.computer/*",
+		"alarms",
+		"webNavigation",
+		"activeTab",
+		"tabs",
+		"actions",
+		"menus"
+	]
+}

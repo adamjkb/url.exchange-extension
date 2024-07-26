@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "ESNext",
+    "lib": ["ES2022", "dom"],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "alwaysStrict": true,
+    "importsNotUsedAsValues": "remove",
+    "types": ["svelte"]
+  },
+  "include": ["src/**/*", "types/**/*"],
+  "exclude": ["node_modules/*", "dist/*"]
+}
