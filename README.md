@@ -1,4 +1,4 @@
-# WebExtensionTemplate
+# url.exchange WebExtension
 
 Create a browser extension for Chrome, Firefox and Safari in no time.
 
@@ -95,3 +95,8 @@ All `npm` commands should be run in `Extension`. Safari extensions should be bui
 ## Other notes 
 
 - Firefox [does not support service workers in the background](https://github.com/mozilla/web-ext/issues/2532#issuecomment-1285039773), so I would maintain a separate branch `firefox` that runs `dist/background.js` as a background script
+
+
+## Credits
+
+Initially based on [kyle-n/WebExtensionTemplate](https://github.com/kyle-n/WebExtensionTemplate/tree/main) template
