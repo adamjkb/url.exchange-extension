@@ -80,6 +80,23 @@ export async function getDevice(deviceId) {
 	return result
 }
 
+/**
+ * @param {string} deviceId
+ * @returns {Promise<{ id: string; name: string; createdAt: string; lastUpdatedAt: string; }>}
+ */
+export async function deleteDevice(deviceId) {
+	const response = await fetch(`${API_URL}/api/devices/${deviceId}`, {
+		headers: {
+			'Authorization': await getAuthorizationHeader()
+		},
+		method: 'DELETE'
+	})
+
+	const result = await response.json()
+
+	return result
+}
+
 
 /**
  * @param {id} id

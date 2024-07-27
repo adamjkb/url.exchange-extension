@@ -9,7 +9,7 @@ import { createSyncedLink, getDevice, getRegisteredDevices } from './api'
  */
 export const parentMenu = {
 	id: 'sendToDeviceMenu',
-	title: 'Send link to device [Sessy]',
+	title: browser.i18n.getMessage('context_menu__parent_menu_title'),
 	contexts: ['link', 'tab'],
 }
 
@@ -18,7 +18,7 @@ export const parentMenu = {
  */
 export const sendToAllDevicesMenu = {
 	id: 'sendToAllDevicesMenu',
-	title: 'Send to all devices',
+	title: browser.i18n.getMessage('context_menu__all_devices_menu_title'),
 	parentId: parentMenu['id']
 }
 
@@ -27,7 +27,7 @@ export const sendToAllDevicesMenu = {
  */
 export const manageDevicesMenu = {
 	id: 'manageDevicesMenu',
-	title: 'Manage devices...',
+	title: browser.i18n.getMessage('context_menu__manage_devices_title'),
 	parentId: parentMenu['id']
 }
 

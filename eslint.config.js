@@ -8,7 +8,7 @@ export default [
 	js.configs.recommended,
 	...eslintPluginSvelte.configs['flat/recommended'],
 	{
-		ignores: ['**/*.ts'],
+		ignores: ['**/*.ts', 'Safari/**'],
 		languageOptions: {
 			globals: {
 				...globals.browser,

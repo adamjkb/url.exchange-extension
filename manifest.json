@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"default_locale": "en",
-	"name": "Sessy",
+	"name": "url.exchange",
 	"description": "__MSG_extension_description__",
 	"version": "1.0.2",
 	"background": {

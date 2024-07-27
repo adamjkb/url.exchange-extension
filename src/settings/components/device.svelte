@@ -1,4 +1,5 @@
 <script>
+	import { untrack } from 'svelte'
 	import { patchRegisteredDevice } from '../../background/api.js'
 
 	let { name: originalName, id } = $props()
@@ -6,6 +7,14 @@
 	let name = $state(originalName)
 	let saving = $state(false)
 
+
+	// Keep name value updated when parent value changes
+	$effect(() => {
+		const untrackedName = untrack(() => name)
+		if (originalName !== untrackedName) {
+			name = originalName
+		}
+	})
 
 	/**
 	 * @param {Event} event

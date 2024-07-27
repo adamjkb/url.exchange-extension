@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  iOS (App)
-//
-//  Created by tester on 5/31/23.
-//
 
 import SwiftUI
 

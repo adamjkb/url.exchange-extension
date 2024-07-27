@@ -85,29 +85,29 @@
 /* Begin PBXFileReference section */
 		308C56432A27BF1C005C001E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		308C56452A27BF1C005C001E /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
-		308C56532A27BF1C005C001E /* REPLACEME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REPLACEME.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		308C56532A27BF1C005C001E /* REPLACEME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = REPLACEME.app; path = url.exchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308C56562A27BF1C005C001E /* iOS AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOS AppView.swift"; sourceTree = "<group>"; };
 		308C56602A27BF1C005C001E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		308C56652A27BF1C005C001E /* REPLACEME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REPLACEME.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		308C56652A27BF1C005C001E /* url.exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = url.exchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308C56672A27BF1C005C001E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		308C56712A27BF1C005C001E /* REPLACEME Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "REPLACEME Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		308C56712A27BF1C005C001E /* REPLACEME Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = "REPLACEME Extension.appex"; path = "url.exchange Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308C56762A27BF1C005C001E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		308C567B2A27BF1C005C001E /* REPLACEME Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "REPLACEME Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		308C567B2A27BF1C005C001E /* REPLACEME Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = "REPLACEME Extension.appex"; path = "url.exchange Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308C56802A27BF1C005C001E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30A8D0622A29467500FD77A6 /* iOS Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "iOS Assets.xcassets"; sourceTree = "<group>"; };
 		30A8D0652A29469A00FD77A6 /* macOS Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "macOS Assets.xcassets"; sourceTree = "<group>"; };
 		30DD36292A55BF1D00361103 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
-		30DD362D2A55C01E00361103 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = ../../../Extension/public; sourceTree = "<group>"; };
-		30DD362F2A55C01F00361103 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../Extension/images; sourceTree = "<group>"; };
-		30DD36302A55C01F00361103 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dist; path = ../../../Extension/dist; sourceTree = "<group>"; };
-		30DD36322A55C01F00361103 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = ../../../Extension/_locales; sourceTree = "<group>"; };
-		30DD36342A55C01F00361103 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest.json; path = ../../../Extension/manifest.json; sourceTree = "<group>"; };
+		30DD362D2A55C01E00361103 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = ../../../public; sourceTree = "<group>"; };
+		30DD362F2A55C01F00361103 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../images; sourceTree = "<group>"; };
+		30DD36302A55C01F00361103 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dist; path = ../../../dist; sourceTree = "<group>"; };
+		30DD36322A55C01F00361103 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = ../../../_locales; sourceTree = "<group>"; };
+		30DD36342A55C01F00361103 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest.json; path = ../../../manifest.json; sourceTree = "<group>"; };
 		99B503362A4CC7A2006397D1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		99B503382A5224ED006397D1 /* macOS AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "macOS AppView.swift"; sourceTree = "<group>"; };
 		99B5033A2A52250E006397D1 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		99E155ED2A522E1D005325D0 /* SafariConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariConnector.swift; sourceTree = "<group>"; };
-		99E155EF2A5312DD005325D0 /* Sessy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessy.entitlements; sourceTree = "<group>"; };
-		99E155F02A5313B1005325D0 /* Sessy.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Sessy.entitlements; sourceTree = "<group>"; };
+		99E155EF2A5312DD005325D0 /* urlexchange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = urlexchange.entitlements; sourceTree = "<group>"; };
+		99E155F02A5313B1005325D0 /* urlexchange.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = urlexchange.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				308C56532A27BF1C005C001E /* REPLACEME.app */,
-				308C56652A27BF1C005C001E /* REPLACEME.app */,
+				308C56652A27BF1C005C001E /* url.exchange.app */,
 				308C56712A27BF1C005C001E /* REPLACEME Extension.appex */,
 				308C567B2A27BF1C005C001E /* REPLACEME Extension.appex */,
 			);
@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				308C56672A27BF1C005C001E /* AppDelegate.swift */,
-				99E155EF2A5312DD005325D0 /* Sessy.entitlements */,
+				99E155EF2A5312DD005325D0 /* urlexchange.entitlements */,
 				30A8D0652A29469A00FD77A6 /* macOS Assets.xcassets */,
 				99B503362A4CC7A2006397D1 /* main.swift */,
 				99B503382A5224ED006397D1 /* macOS AppView.swift */,
@@ -219,7 +219,7 @@
 		308C567F2A27BF1C005C001E /* macOS (Extension) */ = {
 			isa = PBXGroup;
 			children = (
-				99E155F02A5313B1005325D0 /* Sessy.entitlements */,
+				99E155F02A5313B1005325D0 /* urlexchange.entitlements */,
 				308C56802A27BF1C005C001E /* Info.plist */,
 			);
 			path = "macOS (Extension)";
@@ -240,9 +240,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		308C56522A27BF1C005C001E /* Sessy (iOS) */ = {
+		308C56522A27BF1C005C001E /* App (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 308C56A62A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy (iOS)" */;
+			buildConfigurationList = 308C56A62A27BF1C005C001E /* Build configuration list for PBXNativeTarget "App (iOS)" */;
 			buildPhases = (
 				308C564F2A27BF1C005C001E /* Sources */,
 				308C56502A27BF1C005C001E /* Frameworks */,
@@ -254,14 +254,14 @@
 			dependencies = (
 				308C56742A27BF1C005C001E /* PBXTargetDependency */,
 			);
-			name = "Sessy (iOS)";
+			name = "App (iOS)";
 			productName = "Mute Chat for BoardGameArena (iOS)";
 			productReference = 308C56532A27BF1C005C001E /* REPLACEME.app */;
 			productType = "com.apple.product-type.application";
 		};
-		308C56642A27BF1C005C001E /* Sessy (macOS) */ = {
+		308C56642A27BF1C005C001E /* App (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 308C56AD2A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy (macOS)" */;
+			buildConfigurationList = 308C56AD2A27BF1C005C001E /* Build configuration list for PBXNativeTarget "App (macOS)" */;
 			buildPhases = (
 				308C56612A27BF1C005C001E /* Sources */,
 				308C56622A27BF1C005C001E /* Frameworks */,
@@ -273,14 +273,14 @@
 			dependencies = (
 				308C567E2A27BF1C005C001E /* PBXTargetDependency */,
 			);
-			name = "Sessy (macOS)";
+			name = "App (macOS)";
 			productName = "Mute Chat for BoardGameArena (macOS)";
-			productReference = 308C56652A27BF1C005C001E /* REPLACEME.app */;
+			productReference = 308C56652A27BF1C005C001E /* url.exchange.app */;
 			productType = "com.apple.product-type.application";
 		};
-		308C56702A27BF1C005C001E /* Sessy Extension (iOS) */ = {
+		308C56702A27BF1C005C001E /* Extension (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 308C56A22A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy Extension (iOS)" */;
+			buildConfigurationList = 308C56A22A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Extension (iOS)" */;
 			buildPhases = (
 				308C566D2A27BF1C005C001E /* Sources */,
 				308C56B32A27C579005C001E /* Build Extension */,
@@ -292,14 +292,14 @@
 			);
 			dependencies = (
 			);
-			name = "Sessy Extension (iOS)";
+			name = "Extension (iOS)";
 			productName = "Mute Chat for BoardGameArena Extension (iOS)";
 			productReference = 308C56712A27BF1C005C001E /* REPLACEME Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		308C567A2A27BF1C005C001E /* Sessy Extension (macOS) */ = {
+		308C567A2A27BF1C005C001E /* Extension (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 308C56A92A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy Extension (macOS)" */;
+			buildConfigurationList = 308C56A92A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Extension (macOS)" */;
 			buildPhases = (
 				308C56772A27BF1C005C001E /* Sources */,
 				308C56782A27BF1C005C001E /* Frameworks */,
@@ -309,7 +309,7 @@
 			);
 			dependencies = (
 			);
-			name = "Sessy Extension (macOS)";
+			name = "Extension (macOS)";
 			productName = "Mute Chat for BoardGameArena Extension (macOS)";
 			productReference = 308C567B2A27BF1C005C001E /* REPLACEME Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -338,7 +338,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 308C563A2A27BF1A005C001E /* Build configuration list for PBXProject "com.adamscomputer.sessy" */;
+			buildConfigurationList = 308C563A2A27BF1A005C001E /* Build configuration list for PBXProject "com.adamscomputer.urlexchange" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -351,10 +351,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				308C56522A27BF1C005C001E /* Sessy (iOS) */,
-				308C56642A27BF1C005C001E /* Sessy (macOS) */,
-				308C56702A27BF1C005C001E /* Sessy Extension (iOS) */,
-				308C567A2A27BF1C005C001E /* Sessy Extension (macOS) */,
+				308C56522A27BF1C005C001E /* App (iOS) */,
+				308C56642A27BF1C005C001E /* App (macOS) */,
+				308C56702A27BF1C005C001E /* Extension (iOS) */,
+				308C567A2A27BF1C005C001E /* Extension (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -423,7 +423,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ../Extension\nnpm run build\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ..\nnpm run build\n";
 		};
 		308C56B42A27C5EC005C001E /* Build Extension (Production) */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -441,7 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ../Extension\nnpm run build:prod\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ..\nnpm run build:prod\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -492,12 +492,12 @@
 /* Begin PBXTargetDependency section */
 		308C56742A27BF1C005C001E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 308C56702A27BF1C005C001E /* Sessy Extension (iOS) */;
+			target = 308C56702A27BF1C005C001E /* Extension (iOS) */;
 			targetProxy = 308C56732A27BF1C005C001E /* PBXContainerItemProxy */;
 		};
 		308C567E2A27BF1C005C001E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 308C567A2A27BF1C005C001E /* Sessy Extension (macOS) */;
+			target = 308C567A2A27BF1C005C001E /* Extension (macOS) */;
 			targetProxy = 308C567D2A27BF1C005C001E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -622,7 +622,7 @@
 				DEVELOPMENT_TEAM = 24M5WGG2M6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy iOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -635,8 +635,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy.Extension;
-				PRODUCT_NAME = "REPLACEME Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange.Extension;
+				PRODUCT_NAME = "url.exchange Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -653,7 +653,7 @@
 				DEVELOPMENT_TEAM = 24M5WGG2M6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy iOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -666,8 +666,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy.Extension;
-				PRODUCT_NAME = "REPLACEME Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange.Extension;
+				PRODUCT_NAME = "url.exchange Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -688,7 +688,7 @@
 				DEVELOPMENT_TEAM = 24M5WGG2M6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy iOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -707,8 +707,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy;
-				PRODUCT_NAME = REPLACEME;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange;
+				PRODUCT_NAME = url.exchange;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -730,7 +730,7 @@
 				DEVELOPMENT_TEAM = 24M5WGG2M6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy iOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -749,8 +749,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy;
-				PRODUCT_NAME = REPLACEME;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange;
+				PRODUCT_NAME = url.exchange;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -765,7 +765,7 @@
 		308C56AA2A27BF1C005C001E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Sessy.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/urlexchange.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -773,7 +773,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy MacOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -786,8 +786,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy.Extension;
-				PRODUCT_NAME = "REPLACEME Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange.Extension;
+				PRODUCT_NAME = "url.exchange Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -798,7 +798,7 @@
 		308C56AB2A27BF1C005C001E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Sessy.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/urlexchange.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -806,7 +806,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy MacOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -819,8 +819,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy.Extension;
-				PRODUCT_NAME = "REPLACEME Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange.Extension;
+				PRODUCT_NAME = "url.exchange Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -834,14 +834,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Sessy.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/urlexchange.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24M5WGG2M6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy MacOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -857,8 +857,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy;
-				PRODUCT_NAME = REPLACEME;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange;
+				PRODUCT_NAME = url.exchange;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -871,14 +871,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Sessy.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/urlexchange.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24M5WGG2M6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Sessy MacOS";
+				INFOPLIST_KEY_CFBundleDisplayName = url.exchange;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -894,8 +894,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.sessy;
-				PRODUCT_NAME = REPLACEME;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adamscomputer.urlexchange;
+				PRODUCT_NAME = url.exchange;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -905,7 +905,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		308C563A2A27BF1A005C001E /* Build configuration list for PBXProject "com.adamscomputer.sessy" */ = {
+		308C563A2A27BF1A005C001E /* Build configuration list for PBXProject "com.adamscomputer.urlexchange" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				308C56A02A27BF1C005C001E /* Debug */,
@@ -914,7 +914,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		308C56A22A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy Extension (iOS)" */ = {
+		308C56A22A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Extension (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				308C56A32A27BF1C005C001E /* Debug */,
@@ -923,7 +923,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		308C56A62A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy (iOS)" */ = {
+		308C56A62A27BF1C005C001E /* Build configuration list for PBXNativeTarget "App (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				308C56A72A27BF1C005C001E /* Debug */,
@@ -932,7 +932,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		308C56A92A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy Extension (macOS)" */ = {
+		308C56A92A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Extension (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				308C56AA2A27BF1C005C001E /* Debug */,
@@ -941,7 +941,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		308C56AD2A27BF1C005C001E /* Build configuration list for PBXNativeTarget "Sessy (macOS)" */ = {
+		308C56AD2A27BF1C005C001E /* Build configuration list for PBXNativeTarget "App (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				308C56AE2A27BF1C005C001E /* Debug */,

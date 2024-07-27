@@ -1,10 +1,3 @@
-//
-//  Views.swift
-//  Beet Engine
-//
-//  Created by tester on 7/5/23.
-//
-
 import Foundation
 import SwiftUI
 #if os(iOS)

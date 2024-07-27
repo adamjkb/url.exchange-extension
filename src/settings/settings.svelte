@@ -1,13 +1,26 @@
 <script>
-	import { getClientInfo, getRegisteredDevices } from '../background/api'
+	import { deleteDevice, getClientInfo, getRegisteredDevices } from '../background/api'
 	import { LAST_MSG_TS_STORAGE_KEY } from '../shared/consts'
 	import Device from './components/device.svelte'
+	import Refresh from './icons/refresh.svelte'
+	import Trash from './icons/trash.svelte'
+
+
+	function wait(delay) {
+		return new Promise(resolve => {
+			setTimeout(() => {
+				resolve()
+			}, delay)
+		})
+	}
 
 	class AppState {
 		deviceId = $state(null)
 		lastMessageTs = $state(null)
 		devices = $state([])
 		clientInfo = $state(null)
+
+		refreshingDevices = $state(false)
 
 		constructor(init) {
 			this.deviceId = init?.deviceId;
@@ -34,6 +47,28 @@
 			})
 		}
 
+		/**
+		 * Refresh list of devices
+		 */
+		refreshDevices = async () => {
+			this.refreshingDevices = true
+			// Get devices
+			this.devices = await getRegisteredDevices()
+			this.refreshingDevices = false
+		}
+
+		/**
+		 * Remove device from list
+		 * @param {string} id
+		 */
+		removeDevie = async (id) => {
+			const confirmedIntent = confirm(`Delete device named "${this.devices.find(d => d.id === id).name}"?`)
+			if (confirmedIntent) {
+				await deleteDevice(id)
+
+				this.devices = this.devices.filter(d => d.id !== id)
+			}
+		}
 	}
 
 	/**
@@ -62,6 +97,10 @@
 <style>
 
 </style>
+
+<svelte:head>
+	<title>url.exchange | {browser.i18n.getMessage('settings_page__title')}</title>
+</svelte:head>
 
 <main class='min-h-dvh flex'>
 	<div class='p-9'>
@@ -93,14 +132,33 @@
 					<!-- Other devices -->
 					{#if otherDevices && otherDevices.length > 0}
 						<section>
-							<h2 class='text-xl mt-10'>
-								Other devices
-							</h2>
+							<div class='inline-flex mt-10 gap-2'>
+								<h2 class='text-lg'>
+									Other devices
+								</h2>
+								<button
+									class:animate-spin={appState.refreshingDevices}
+									aria-label='Refresh device list'
+									onclick={appState.refreshDevices}
+									type='button'>
+
+									<Refresh class='size-4'/>
+								</button>
+							</div>
 							<div class='flex flex-col gap-y-2'>
 								{#each otherDevices as device}
-									<Device
-										id={device.id}
-										name={device.name}/>
+									<div class='inline-flex'>
+										<Device
+											id={device.id}
+											name={device.name}/>
+										<button
+											class='hover:text-red-700 ml-2'
+											aria-label='Remove device'
+											onclick={() => appState.removeDevie(device.id)}
+											type='button'>
+											<Trash class='size-5'/>
+										</button>
+									</div>
 								{/each}
 							</div>
 						</section>

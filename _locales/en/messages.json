@@ -1,0 +1,26 @@
+{
+	"extension_name": {
+		"message": "url.exchange extensions",
+		"description": "The display name for the extension."
+	},
+	"extension_description": {
+		"message": "Send and receive links from your devices",
+		"description": "Description of what the extension does."
+	},
+	"context_menu__parent_menu_title": {
+		"message": "Send link to device",
+		"description": "Parent context menu's title"
+	},
+	"context_menu__all_devices_menu_title": {
+		"message": "Send to all devices",
+		"description": "Sub context menu for all devices"
+	},
+	"context_menu__manage_devices_title": {
+		"message": "Manage devices...",
+		"description": "Sub context menu for managing devices"
+	},
+	"settings_page__title": {
+		"message": "settings",
+		"description": "Settings' page title"
+	}
+}
