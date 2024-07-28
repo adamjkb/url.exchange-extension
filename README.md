@@ -1,8 +1,12 @@
 # url.exchange WebExtension
 
-### Firefox
 
-- Update `manifest.json` with a Firefox extension id (under `gecko` > `id`) in the format `appname@domain.com` 
+## Building and running locally
+
+- Make sure you have Node.js 20 or later installed
+- Run `npm install --force` (use `--force` due to Svelte 5 pre-release versioning)
+- Run `npm run build` or `npm run watch`
+
 
 ### Safari
 
@@ -35,30 +39,17 @@ Note: “Open the project config” means double-click the app name at the top o
 	- Reduce the size of the app icon by 20% while keeping the canvas the same size
 	- Add the app icon to `macOS (App)/macOS Assets` as `AppIcon` with all the required sizes
 
-## Building your extension
-
-All `npm` commands should be run in `Extension`. Safari extensions should be built in Xcode. 
+## Building extension
 
 | Browser | Local | Production |
 | - | - | - |
-| Chrome | `npm run build` | `npm run build:chrome` |
-| Firefox | `npm run build` | `npm run build:firefox` |
+| Chrome | `npm run watch` | `npm run zip:extension` |
+| Firefox | `npm run watch` | `npm run zip:extension && npm run zip:source` |
 | Safari | Product > Build | Product > Archive |
 
 - The Chrome build script generates a zip that can be uploaded to the Chrome Web Store
 - The Firefox build script generates a zip for the Mozilla Add-On Store as well as a zip of the source code for the store review
 
-
-## Building and running locally
-
-Build scripts are tested on **Mac**. These will probably work on Linux and Windows Subsystem for Linux, but I have not tested them.
-
-- Make sure you have Node.js 19.7.0 or later installed
-- Open the folder containing this README
-- Run `npm install`
-- Run `npm run build`
-
-Continue the process with the steps listed below.
 
 ### Firefox
 

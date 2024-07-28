@@ -6,6 +6,6 @@ const exec = util.promisify(execOriginal)
 
 await fs.rm('./dist', { recursive: true })
 await fs.mkdir('./dist')
-await exec('npm run build -- --prod')
+await exec('npm run build')
 
 console.log('Finished building')

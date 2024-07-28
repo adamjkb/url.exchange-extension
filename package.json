@@ -1,6 +1,6 @@
 {
 	"name": "url.exchange",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"description": "",
 	"author": "Adam Jakab",
 	"license": "MIT",
@@ -11,27 +11,27 @@
 		"watch:js": "node scripts/build.js --watch",
 		"watch:css": "tailwindcss -i ./src/settings/tailwind.css -o ./dist/settings.tw.css --watch --minify",
 		"watch": "concurrently -k \"npm:watch:*\"",
-		"build:prod": "node scripts/prod-build.js",
-		"build:chrome": "node scripts/package-extension.js",
-		"build:firefox": "node scripts/firefox-build.js"
+		"build:clean": "node scripts/clean-build.js",
+		"zip:extension": "node scripts/zip-extension.js",
+		"zip:source": "node scripts/zip-source.js"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.7.0",
 		"@svitejs/changesets-changelog-github-compact": "^1.1.0",
 		"@tsconfig/svelte": "^5.0.4",
 		"@types/webextension-polyfill": "^0.10.7",
+		"archiver": "^7.0.1",
 		"concurrently": "^8.2.2",
 		"esbuild": "^0.23.0",
 		"esbuild-svelte": "^0.8.1",
 		"eslint": "^9.7.0",
 		"eslint-plugin-svelte": "^2.43.0",
 		"globals": "^15.8.0",
-		"svelte": "^5.0.0-next.193",
+		"svelte": "^5.0.0-next.200",
 		"svelte-preprocess": "^6.0.2",
 		"tailwindcss": "^3.4.6",
 		"typescript": "^5.5.3",
-		"unplugin-auto-import": "^0.18.0",
-		"zip-local": "^0.3.5"
+		"unplugin-auto-import": "^0.18.0"
 	},
 	"dependencies": {
 		"@microsoft/fetch-event-source": "^2.0.1",
