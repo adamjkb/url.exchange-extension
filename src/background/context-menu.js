@@ -46,10 +46,6 @@ function getUrlFromClick(info, tab) {
 	return info?.linkUrl || tab?.url
 }
 
-async function sendLinkToDevice() {
-
-}
-
 export async function createContextMenus() {
 	browser.menus.create(parentMenu, menuCallback)
 
@@ -89,6 +85,10 @@ export async function createContextMenus() {
 			await browser.menus.update(`${deviceMenuIdPrefix}${updatedDevice.id}`, {
 				title: updatedDevice.name
 			})
+		} else if (message?.type === 'deviceRemoved' && message?.payload?.id) {
+			console.log(`Device removed: ${message.payload.id}`)
+
+			await browser.menus.remove(`${deviceMenuIdPrefix}${message.payload.id}`)
 		}
 	})
 

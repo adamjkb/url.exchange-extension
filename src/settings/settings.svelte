@@ -6,14 +6,6 @@
 	import Trash from './icons/trash.svelte'
 
 
-	function wait(delay) {
-		return new Promise(resolve => {
-			setTimeout(() => {
-				resolve()
-			}, delay)
-		})
-	}
-
 	class AppState {
 		deviceId = $state(null)
 		lastMessageTs = $state(null)
@@ -65,11 +57,32 @@
 			const confirmedIntent = confirm(`Delete device named "${this.devices.find(d => d.id === id).name}"?`)
 			if (confirmedIntent) {
 				await deleteDevice(id)
+				await browser.runtime.sendMessage({ type: 'deviceRemoved', payload: { id } })
 
 				this.devices = this.devices.filter(d => d.id !== id)
 			}
 		}
 	}
+
+
+	const relativeTimeFormatter = new Intl.RelativeTimeFormat(browser.i18n.getUILanguage(), { numeric: 'auto', style: 'long' })
+
+	let nowTs = $state(new Date().valueOf())
+	let timeAgo = $derived.by(() => {
+		const secondsAgo = Math.min(Math.round(appState.lastMessageTs / 1000 - nowTs / 1000 ), 0)
+
+		return relativeTimeFormatter.format(secondsAgo, 'seconds')
+	})
+
+	$effect(() => {
+		const timerId = setInterval(() => {
+			nowTs = new Date().valueOf()
+		}, 1000)
+
+		return () => {
+			clearInterval(timerId)
+		}
+	})
 
 	/**
 	 * @type {{ isLoggedIn: boolean; }}
@@ -99,7 +112,7 @@
 </style>
 
 <svelte:head>
-	<title>url.exchange | {browser.i18n.getMessage('settings_page__title')}</title>
+	<title>url.exchange | {browser.i18n.getMessage('settings_page__window_title')}</title>
 </svelte:head>
 
 <main class='min-h-dvh flex'>
@@ -108,18 +121,20 @@
 			<button
 				onclick={openSigninPage}
 				type='button'>
-				Sign in
+				{browser.i18n.getMessage('settings_page__sign_in_label')}
 			</button>
 		{:else}
 			<div class='flex flex-col h-full'>
 				<header class='flex-1'>
-					<h1 class='text-2xl'>Settings</h1>
+					<h1 class='text-2xl'>
+						{browser.i18n.getMessage('settings_page__heading')}
+					</h1>
 
 					<!-- This device -->
 					{#if thisDevice}
 						<section>
 							<h2 class='text-xl mt-10'>
-								Device name
+								{browser.i18n.getMessage('settings_page__device_heading')}
 							</h2>
 							<div class='flex flex-col gap-y-2'>
 								<Device
@@ -134,14 +149,13 @@
 						<section>
 							<div class='inline-flex mt-10 gap-2'>
 								<h2 class='text-lg'>
-									Other devices
+									{browser.i18n.getMessage('settings_page__other_devices_heading')}
 								</h2>
 								<button
 									class:animate-spin={appState.refreshingDevices}
-									aria-label='Refresh device list'
+									aria-label={browser.i18n.getMessage('settings_page__refresh_devices_label')}
 									onclick={appState.refreshDevices}
 									type='button'>
-
 									<Refresh class='size-4'/>
 								</button>
 							</div>
@@ -153,7 +167,7 @@
 											name={device.name}/>
 										<button
 											class='hover:text-red-700 ml-2'
-											aria-label='Remove device'
+											aria-label={browser.i18n.getMessage('settings_page__remove_device_label')}
 											onclick={() => appState.removeDevie(device.id)}
 											type='button'>
 											<Trash class='size-5'/>
@@ -168,13 +182,13 @@
 				</header>
 				<footer>
 					<p class='text-xs text-gray-700'>
-						Client ID: {appState.clientInfo?.publicId}
+						{browser.i18n.getMessage('settings_page__footer_client_info', appState.clientInfo?.publicId)}
 					</p>
 					<p class='text-xs text-gray-700'>
-						Device ID: {appState.deviceId}
+						{browser.i18n.getMessage('settings_page__footer_device_info', appState.deviceId)}
 					</p>
 					<p class='text-xs text-gray-700'>
-						Last message timestamp: {appState.lastMessageTs}
+						{browser.i18n.getMessage('settings_page__footer_last_message_info', timeAgo)}
 					</p>
 				</footer>
 			</div>

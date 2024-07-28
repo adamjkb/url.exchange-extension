@@ -19,8 +19,62 @@
 		"message": "Manage devices...",
 		"description": "Sub context menu for managing devices"
 	},
-	"settings_page__title": {
+	"settings_page__window_title": {
 		"message": "settings",
 		"description": "Settings' page title"
+	},
+	"settings_page__heading": {
+		"message": "Settings",
+		"description": "Settings' page heading"
+	},
+	"settings_page__sign_in_label": {
+		"message": "Sign in",
+		"description": "Sign in label"
+	},
+	"settings_page__device_heading": {
+		"message": "Device name",
+		"description": "Device management label"
+	},
+	"settings_page__other_devices_heading": {
+		"message": "Other devices",
+		"description": "Other devices management label"
+	},
+	"settings_page__refresh_devices_label": {
+		"message": "Refresh devices list",
+		"description": "Refresh button's aria-label"
+	},
+	"settings_page__remove_device_label": {
+		"message": "Remove device",
+		"description": "Remove device button's aria-label"
+	},
+	"settings_page__footer_client_info": {
+		"message": "Client ID: $ID$",
+		"description": "Footer client info",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "786fe364-feec-444c-945b-981d6d76a9d6"
+			}
+		}
+	},
+	"settings_page__footer_device_info": {
+		"message": "Device ID: $ID2$",
+		"description": "Footer device info",
+		"placeholders": {
+			"id2": {
+				"content": "$1",
+				"example": "clz59aadf0005iv0b9howjpe4"
+			}
+		}
+	},
+	"settings_page__footer_last_message_info": {
+		"message": "Last message: $RELATIVE_TIME$",
+		"description": "Footer last message info",
+		"placeholders": {
+			"relative_time": {
+				"content": "$1",
+				"example": "10 seconds ago"
+			}
+		}
 	}
 }
