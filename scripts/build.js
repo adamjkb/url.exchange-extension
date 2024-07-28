@@ -5,7 +5,7 @@ import { sveltePreprocess } from 'svelte-preprocess'
 import AutoImport from 'unplugin-auto-import/esbuild'
 import { logBuildPerformance } from './esbuild-plugins.js'
 
-const PROD_BUILD = process.argv.includes('--prod')
+const PROD_BUILD = process.argv.some(arg => arg === '--prod')
 const WATCH_MODE = process.argv.some(arg => arg === '--watch')
 
 
@@ -14,6 +14,7 @@ const WATCH_MODE = process.argv.some(arg => arg === '--watch')
  */
 const commonPlugins = [
 	AutoImport({
+		dts: false,
 		imports: [{
 			from: 'webextension-polyfill',
 			// { default as browser }

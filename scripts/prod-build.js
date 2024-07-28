@@ -1,12 +1,11 @@
-const fs = require('fs/promises')
-const util = require('util')
-const exec = util.promisify(require('child_process').exec)
+import fs from 'node:fs/promises'
+import util from 'node:util'
+import { exec as execOriginal } from 'node:child_process'
+const exec = util.promisify(execOriginal)
 
-main()
 
-async function main() {
-	await fs.rm('./dist', { recursive: true })
-	await fs.mkdir('./dist')
-	await exec('npm run build -- --prod')
-	console.log('Done')
-}
+await fs.rm('./dist', { recursive: true })
+await fs.mkdir('./dist')
+await exec('npm run build -- --prod')
+
+console.log('Finished building')

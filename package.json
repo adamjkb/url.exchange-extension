@@ -1,11 +1,13 @@
 {
-	"name": "sessy",
+	"name": "url.exchange",
 	"version": "1.0.1",
 	"description": "",
-	"main": "background.js",
+	"author": "Adam Jakab",
+	"license": "MIT",
+	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "node scripts/build.js",
+		"build": "node scripts/build.js && tailwindcss -i ./src/settings/tailwind.css -o ./dist/settings.tw.css --minify",
 		"watch:js": "node scripts/build.js --watch",
 		"watch:css": "tailwindcss -i ./src/settings/tailwind.css -o ./dist/settings.tw.css --watch --minify",
 		"watch": "concurrently -k \"npm:watch:*\"",
@@ -13,9 +15,6 @@
 		"build:chrome": "node scripts/package-extension.js",
 		"build:firefox": "node scripts/firefox-build.js"
 	},
-	"author": "Adam Jakab",
-	"license": "MIT",
-	"private": true,
 	"devDependencies": {
 		"@eslint/js": "^9.7.0",
 		"@svitejs/changesets-changelog-github-compact": "^1.1.0",
