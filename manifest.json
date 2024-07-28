@@ -45,7 +45,8 @@
 		"webNavigation",
 		"activeTab",
 		"tabs",
-		"actions",
-		"menus"
+		"browser_action",
+		"menus",
+		"contextMenus"
 	]
 }

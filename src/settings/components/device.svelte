@@ -1,6 +1,7 @@
 <script>
 	import { untrack } from 'svelte'
 	import { patchRegisteredDevice } from '../../background/api.js'
+	import browser from 'webextension-polyfill'
 
 	let { name: originalName, id } = $props()
 

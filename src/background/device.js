@@ -22,5 +22,5 @@ export async function checkDeviceRegistration() {
 		await browser.storage.local.set({[DEVICE_ID_STORAGE_KEY]: device.id })
 	}
 
-	return true
+	return !!deviceId
 }

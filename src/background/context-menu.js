@@ -2,6 +2,7 @@
 // logged when the extension attempt to register the already-registered menu
 
 import { DEVICE_ID_STORAGE_KEY } from '../shared/consts'
+import { createContextMenuItem } from '../shared/utils'
 import { createSyncedLink, getDevice, getRegisteredDevices } from './api'
 
 /**
@@ -10,7 +11,7 @@ import { createSyncedLink, getDevice, getRegisteredDevices } from './api'
 export const parentMenu = {
 	id: 'sendToDeviceMenu',
 	title: browser.i18n.getMessage('context_menu__parent_menu_title'),
-	contexts: ['link', 'tab'],
+	contexts: ['link', /* 'tab' Because chrome doesn't support tab... sigh... */],
 }
 
 /**
@@ -19,7 +20,8 @@ export const parentMenu = {
 export const sendToAllDevicesMenu = {
 	id: 'sendToAllDevicesMenu',
 	title: browser.i18n.getMessage('context_menu__all_devices_menu_title'),
-	parentId: parentMenu['id']
+	parentId: parentMenu['id'],
+	contexts: parentMenu['contexts']
 }
 
 /**
@@ -28,12 +30,11 @@ export const sendToAllDevicesMenu = {
 export const manageDevicesMenu = {
 	id: 'manageDevicesMenu',
 	title: browser.i18n.getMessage('context_menu__manage_devices_title'),
-	parentId: parentMenu['id']
+	parentId: parentMenu['id'],
+	contexts: parentMenu['contexts'],
 }
 
 const deviceMenuIdPrefix = 'deviceId:'
-
-const menuCallback = () => void browser.runtime.lastError
 
 
 /**
@@ -47,33 +48,37 @@ function getUrlFromClick(info, tab) {
 }
 
 export async function createContextMenus() {
-	browser.menus.create(parentMenu, menuCallback)
+	// Cleanup old context menus
+	await browser.contextMenus.removeAll()
+	await createContextMenuItem(parentMenu)
 
 	const { [DEVICE_ID_STORAGE_KEY]: deviceId } = await browser.storage.local.get(DEVICE_ID_STORAGE_KEY)
 
 	const targetableDevices = await getRegisteredDevices().then(devices => devices.filter(d => d.id !== deviceId))
 
 	for (const device of targetableDevices) {
-		browser.menus.create({
+		await createContextMenuItem({
 			parentId: parentMenu['id'],
 			title: device.name,
 			id: `${deviceMenuIdPrefix}${device.id}`,
-		}, menuCallback)
+			contexts: parentMenu['contexts']
+		})
 	}
 
-	browser.menus.create({
+	await createContextMenuItem({
 		id: '_sep',
 		type: 'separator',
 		parentId: parentMenu['id'],
-	}, menuCallback)
+		contexts: parentMenu['contexts']
+	})
 
 	// Send to all devices
 	if (targetableDevices.length > 0) {
-		browser.menus.create(sendToAllDevicesMenu, menuCallback)
+		await createContextMenuItem(sendToAllDevicesMenu)
 	}
 
 	// Manage devices
-	browser.menus.create(manageDevicesMenu, menuCallback)
+	await createContextMenuItem(manageDevicesMenu)
 
 	// Keep device name up to date
 	browser.runtime.onMessage.addListener(async (message) => {
@@ -82,17 +87,17 @@ export async function createContextMenus() {
 
 			const updatedDevice = await getDevice(message.payload.id)
 
-			await browser.menus.update(`${deviceMenuIdPrefix}${updatedDevice.id}`, {
+			await browser.contextMenus.update(`${deviceMenuIdPrefix}${updatedDevice.id}`, {
 				title: updatedDevice.name
 			})
 		} else if (message?.type === 'deviceRemoved' && message?.payload?.id) {
 			console.log(`Device removed: ${message.payload.id}`)
 
-			await browser.menus.remove(`${deviceMenuIdPrefix}${message.payload.id}`)
+			await browser.contextMenus.remove(`${deviceMenuIdPrefix}${message.payload.id}`)
 		}
 	})
 
-	browser.menus.onClicked.addListener(async (info, tab) => {
+	browser.contextMenus.onClicked.addListener(async (info, tab) => {
 		switch (info.menuItemId) {
 		case manageDevicesMenu['id']:
 			await browser.runtime.openOptionsPage()

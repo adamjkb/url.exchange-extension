@@ -4,7 +4,7 @@
 	import Device from './components/device.svelte'
 	import Refresh from './icons/refresh.svelte'
 	import Trash from './icons/trash.svelte'
-
+	import browser from 'webextension-polyfill'
 
 	class AppState {
 		deviceId = $state(null)
@@ -69,9 +69,13 @@
 
 	let nowTs = $state(new Date().valueOf())
 	let timeAgo = $derived.by(() => {
-		const secondsAgo = Math.min(Math.round(appState.lastMessageTs / 1000 - nowTs / 1000 ), 0)
+		if (appState.lastMessageTs) {
+			const secondsAgo = Math.min(Math.round(appState.lastMessageTs / 1000 - nowTs / 1000 ), 0)
 
-		return relativeTimeFormatter.format(secondsAgo, 'seconds')
+			return relativeTimeFormatter.format(secondsAgo, 'seconds')
+		} else {
+			return 'N/A'
+		}
 	})
 
 	$effect(() => {
