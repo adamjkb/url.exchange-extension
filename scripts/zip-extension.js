@@ -9,7 +9,7 @@ await exec('npm run build:clean')
 
 // Import extension version
 const { version } = JSON.parse(fs.readFileSync('manifest.json', 'utf8'))
-const outputFile = fs.createWriteStream(`./url.exchange-${version}.zip`)
+const outputFile = fs.createWriteStream(`./url.exchange${process.env.TARGET ? `-${process.env.TARGET}`: ''}-${version}.zip`)
 
 // End of stream listener
 outputFile.on('close', function () {

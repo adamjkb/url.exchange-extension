@@ -11,7 +11,11 @@ import { createSyncedLink, getDevice, getRegisteredDevices } from './api'
 export const parentMenu = {
 	id: 'sendToDeviceMenu',
 	title: browser.i18n.getMessage('context_menu__parent_menu_title'),
-	contexts: ['link', /* 'tab' Because chrome doesn't support tab... sigh... */],
+	contexts: [
+		'link',
+		// NOTE: Chrome doesn't support "tab" context
+		...TARGET !== 'chrome' ? ['tab'] : []
+	],
 }
 
 /**

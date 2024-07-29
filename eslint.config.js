@@ -14,7 +14,8 @@ export default [
 				...globals.browser,
 				...globals.node,
 				browser: 'readonly',
-				'API_URL': 'readonly'
+				'API_URL': 'readonly',
+				'TARGET': 'readonly'
 			}
 		},
 		rules: {

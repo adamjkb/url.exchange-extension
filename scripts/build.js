@@ -17,7 +17,7 @@ const commonPlugins = [
 		imports: [{
 			from: 'webextension-polyfill',
 			// { default as browser }
-			imports: [['default', 'browser']]
+			imports: [['default', 'browser']],
 		}]
 	}),
 ]
@@ -29,7 +29,8 @@ const commonConfig = {
 	outbase: './src',
 	platform: 'browser',
 	define: {
-		'API_URL': '"https://url-exchange.adams.computer"'
+		'API_URL': '"https://url-exchange.adams.computer"',
+		'TARGET': `"${process.env.TARGET}"`
 	},
 	external: [],
 	bundle: true,
