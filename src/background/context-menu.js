@@ -11,11 +11,7 @@ import { createSyncedLink, getDevice, getRegisteredDevices } from './api'
 export const parentMenu = {
 	id: 'sendToDeviceMenu',
 	title: browser.i18n.getMessage('context_menu__parent_menu_title'),
-	contexts: [
-		'link',
-		// NOTE: Chrome doesn't support "tab" context
-		...TARGET !== 'chrome' ? ['tab'] : []
-	],
+	contexts: ['all'],
 }
 
 /**
@@ -48,7 +44,7 @@ const deviceMenuIdPrefix = 'deviceId:'
  */
 function getUrlFromClick(info, tab) {
 	// Hope for the best
-	return info?.linkUrl || tab?.url
+	return info?.linkUrl || tab?.url || info?.pageUrl || info?.srcUrl || info?.frameUrl
 }
 
 export async function createContextMenus() {

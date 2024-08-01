@@ -3,7 +3,7 @@
 	"default_locale": "en",
 	"name": "url.exchange",
 	"description": "__MSG_extension_description__",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"background": {
 		"scripts": [
 			"dist/background.js"

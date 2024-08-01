@@ -1,17 +1,15 @@
-import { DEVICE_ID_STORAGE_KEY, LAST_MSG_TS_STORAGE_KEY } from '../shared/consts'
+import { DEVICE_ID_STORAGE_KEY } from '../shared/consts'
 import { getSyncedLinks, patchSyncedLink } from './api'
 
 export async function handleMissedLinks() {
 	try {
 		const {
-			[DEVICE_ID_STORAGE_KEY]: deviceId,
-			[LAST_MSG_TS_STORAGE_KEY]: lastConnectedTs
-		 } = await browser.storage.local.get([DEVICE_ID_STORAGE_KEY, LAST_MSG_TS_STORAGE_KEY])
+			[DEVICE_ID_STORAGE_KEY]: deviceId
+		 } = await browser.storage.local.get(DEVICE_ID_STORAGE_KEY)
 
-		if (lastConnectedTs) {
+		if (deviceId) {
 			const missedLinks = await getSyncedLinks({
 				seen: false,
-				since: new Date(lastConnectedTs),
 				destinationDeviceId: deviceId
 			})
 
