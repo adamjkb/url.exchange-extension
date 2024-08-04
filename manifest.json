@@ -3,7 +3,7 @@
 	"default_locale": "en",
 	"name": "url.exchange",
 	"description": "__MSG_extension_description__",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"background": {
 		"scripts": [
 			"dist/background.js"
@@ -26,7 +26,9 @@
 			"38": "static/images/v0_38px.png",
 			"48": "static/images/v0_48px.png",
 			"72": "static/images/v0_72px.png"
-		}
+		},
+		"default_title": "__MSG_popup_default_title__",
+		"default_popup": "static/popup.html"
 	},
 	"options_ui": {
 		"page": "static/settings.html",

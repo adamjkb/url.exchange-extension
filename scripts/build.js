@@ -67,17 +67,38 @@ try {
 		]
 	})
 
+	const popupJobContext = await context({
+		...commonConfig,
+		entryPoints: ['./src/popup/popup.js'],
+		outbase: './src/popup',
+		outdir: './dist',
+		mainFields: ['svelte', 'module', 'main', 'browser'],
+		plugins: [
+			sveltePlugin({
+				preprocess: sveltePreprocess(),
+				compilerOptions: {
+					runes: true,
+				}
+			}),
+			...commonPlugins,
+			logBuildPerformance('popup')
+		]
+	})
+
 	if (WATCH_MODE) {
 		await backgroundJobContext.watch()
 		await settingsJobContext.watch()
+		await popupJobContext.watch()
 	} else {
 		// Build
 		await backgroundJobContext.rebuild()
 		await settingsJobContext.rebuild()
+		await popupJobContext.rebuild()
 
 		// Destroy context
 		await backgroundJobContext.dispose()
 		await settingsJobContext.dispose()
+		await popupJobContext.dispose()
 
 		// Exit sucessful process
 		process.exit(0)

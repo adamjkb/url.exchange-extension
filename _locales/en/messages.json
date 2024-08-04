@@ -76,5 +76,21 @@
 				"example": "10 seconds ago"
 			}
 		}
+	},
+	"popup_default_title": {
+		"message": "Send page link",
+		"description": "Popup action title"
+	},
+	"popup__device_selection_heading": {
+		"message": "Select devices",
+		"description": "Heading above devices"
+	},
+	"popup__device_selection_submit_label": {
+		"message": "Send link to device(s)",
+		"description": "Submission button label"
+	},
+	"popup__device_selection_submission_loading_label": {
+		"message": "Sending...",
+		"description": "Submission loading state"
 	}
 }
